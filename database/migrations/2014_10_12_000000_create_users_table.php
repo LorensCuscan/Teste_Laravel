@@ -17,8 +17,13 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+<<<<<<< HEAD
             $table->date('birth_date');
             $table->timestamps();
+=======
+            $table->string('birth_date');
+            $table->dateTime('creation_date');
+>>>>>>> 2ffffecf59e4b599398bdb648105f5d5c53ef700
             $table->softDeletes();        
         });
     }

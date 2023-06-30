@@ -11,8 +11,12 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
+<<<<<<< HEAD
         "laravel/ui": "^4.2",
         "yajra/laravel-datatables-oracle": "^10.6"
+=======
+        "laravel/ui": "^4.2"
+>>>>>>> 2ffffecf59e4b599398bdb648105f5d5c53ef700
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

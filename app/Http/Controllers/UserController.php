@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Validator;
 use Yajra\DataTables\Facades\Datatables;
+=======
+>>>>>>> 2ffffecf59e4b599398bdb648105f5d5c53ef700
 use Illuminate\Http\Request;
 use App\Models\User;
 
@@ -15,6 +18,7 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      */
+<<<<<<< HEAD
     public function index(Request $request)
     {
         if ($request->ajax()) {
@@ -31,6 +35,17 @@ class UserController extends Controller
         }
 
         return view('users.index');
+=======
+    public function index()
+    {
+        $users = User::all();
+    
+        if (request()->wantsJson()) {
+            return $users;
+        }
+    
+        return view('users.index', compact('users'));
+>>>>>>> 2ffffecf59e4b599398bdb648105f5d5c53ef700
     }
 
     /**
@@ -46,6 +61,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
@@ -63,6 +79,9 @@ class UserController extends Controller
         return response()->json([
             'message' => 'ERRo'
         ]);
+=======
+        //
+>>>>>>> 2ffffecf59e4b599398bdb648105f5d5c53ef700
     }
 
     /**
@@ -76,9 +95,15 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
+<<<<<<< HEAD
     public function edit(User $user)
     {
         return view('users.create', compact('user'));
+=======
+    public function edit(string $id)
+    {
+        //
+>>>>>>> 2ffffecf59e4b599398bdb648105f5d5c53ef700
     }
 
     /**
@@ -94,6 +119,12 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
+<<<<<<< HEAD
         return view('users.index');
     }
 }
+=======
+        //
+    }
+}
+>>>>>>> 2ffffecf59e4b599398bdb648105f5d5c53ef700

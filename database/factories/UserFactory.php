@@ -18,9 +18,15 @@ class UserFactory extends Factory
         return [
             'name' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail(),
+<<<<<<< HEAD
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'birth_date' => $this->faker->date(),
             'created_at' => Carbon::now()
+=======
+            'creation_date' => Carbon::now()->toDateTimeString(),
+            'birth_date' => $this->faker->date(),
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+>>>>>>> 2ffffecf59e4b599398bdb648105f5d5c53ef700
         ];
     }
 
